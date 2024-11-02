@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "268832681460",
+    "project_id": "lista-de-pets",
+    "storage_bucket": "lista-de-pets.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268832681460:android:09d8fff29ff2ed47115da1",
+        "android_client_info": {
+          "package_name": "com.example.pet_list"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDag4Gqbce2VPXDt6410qJd1kfOng6FA6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

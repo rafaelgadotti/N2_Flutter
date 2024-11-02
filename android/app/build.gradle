@@ -1,0 +1,48 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // O plugin do Flutter Gradle deve ser aplicado após os plugins Android e Kotlin.
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Adiciona o plugin do Google Services
+}
+
+android {
+    namespace = "com.example.pet_list"
+    compileSdk = 34 // Atualize para a versão mais recente do SDK (exemplo: 34)
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.pet_list"
+        minSdk = 21 // Altere conforme necessário (ex: 21, 22, etc.)
+        targetSdk = 34 // Atualize para a versão mais recente do SDK
+        versionCode = 1 // Altere conforme necessário
+        versionName = "1.0" // Altere conforme necessário
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug // Altere para sua configuração de assinatura
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Importa o Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+
+    // Adicione as dependências do Firebase que você deseja usar
+    implementation 'com.google.firebase:firebase-analytics' // Exemplo: Firebase Analytics
+    // Adicione outras dependências do Firebase conforme necessário
+}
